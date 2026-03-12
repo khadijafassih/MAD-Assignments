@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Personal Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👤  Personal Information" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Full Name *" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etFullName" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:hint="Enter your full name"
+                    android:inputType="textPersonName" android:background="@drawable/bg_input"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Phone Number *" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etPhone" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:hint="+92 300 0000000"
+                    android:inputType="phone" android:background="@drawable/bg_input"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Email Address *" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <EditText android:id="@+id/etEmail" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:hint="you@email.com"
+                    android:inputType="textEmailAddress" android:background="@drawable/bg_input"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Event Details Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📋  Event Details" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Event Type *" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerEventType" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="14dp" android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Event Date *" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+                <Button
+                    android:id="@+id/etEventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Select event date"
+                    android:text=""
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="14dp"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:stateListAnimator="@null"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Gender Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚧  Gender *" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <RadioGroup android:id="@+id/rgGender" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+
+                    <RadioButton android:id="@+id/rbMale" android:layout_width="0dp"
+                        android:layout_height="52dp" android:layout_weight="1"
+                        android:text="Male" android:gravity="center" android:button="@null"
+                        android:background="@drawable/bg_radio_selector"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textStyle="bold" android:layout_marginEnd="6dp"/>
+
+                    <RadioButton android:id="@+id/rbFemale" android:layout_width="0dp"
+                        android:layout_height="52dp" android:layout_weight="1"
+                        android:text="Female" android:gravity="center" android:button="@null"
+                        android:background="@drawable/bg_radio_selector"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textStyle="bold" android:layout_marginHorizontal="3dp"/>
+
+                    <RadioButton android:id="@+id/rbOther" android:layout_width="0dp"
+                        android:layout_height="52dp" android:layout_weight="1"
+                        android:text="Other" android:gravity="center" android:button="@null"
+                        android:background="@drawable/bg_radio_selector"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textStyle="bold" android:layout_marginStart="6dp"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Image Upload Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🖼️  Profile Image" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <ImageView android:id="@+id/ivProfile" android:layout_width="90dp"
+                    android:layout_height="90dp" android:scaleType="centerCrop"
+                    android:background="@drawable/bg_image_placeholder"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp" android:visibility="gone"/>
+
+                <Button android:id="@+id/btnUploadImage" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:text="📸  Upload Profile Image"
+                    android:textSize="14sp" android:textStyle="bold"
+                    android:background="@drawable/bg_button_outline"
+                    android:textColor="@color/purple_primary" android:stateListAnimator="@null"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Terms Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <CheckBox android:id="@+id/cbTerms" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:buttonTint="@color/purple_primary"/>
+
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="10dp"
+                    android:text="I accept the Terms and Conditions and Privacy Policy of EventMOS"
+                    android:textSize="13sp" android:textColor="@color/text_muted"
+                    android:lineSpacingMultiplier="1.4"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button android:id="@+id/btnSubmit" android:layout_width="match_parent"
+            android:layout_height="58dp" android:text="Submit Registration"
+            android:textSize="16sp" android:textStyle="bold"
+            android:background="@drawable/bg_button_gradient"
+            android:textColor="#FFFFFF" android:layout_marginBottom="24dp"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+</ScrollView>
